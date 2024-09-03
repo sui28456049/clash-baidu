@@ -35,8 +35,12 @@ proxies:
   - {name: "测试三", server: 220.181.111.189, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 153.3.236.22:443}}
   - {name: "测试四", server: 157.148.69.165, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 153.3.236.22:443}}
   - {name: "测试五", server: 157.148.69.165, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: www.douyin.com}}
+  - {name: 223.109.82.11-153, server: 223.109.82.11, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 153.3.236.22:443}}
+  - {name: 183.240.98.84, server: 183.240.98.84, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 183.240.98.84:443}}
+  - {name: 36.155.169.188, server: 223.109.82.11, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 36.155.169.188:443}}
+  - {name: 223.109.82.11-223, server: 223.109.82.11, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 223.109.82.11:443}}
 
-  
+
 
 proxy-groups:
   - name: 节点选择
@@ -62,6 +66,10 @@ proxy-groups:
       - 测试三
       - 测试四
       - 测试五
+      - 223.109.82.11-153
+      - 183.240.98.84
+      - 36.155.169.188
+      - 223.109.82.11-223
       - 自动延迟
   - name: 自动延迟
     type: url-test
@@ -88,6 +96,10 @@ proxy-groups:
       - 测试三
       - 测试四
       - 测试五
+      - 223.109.82.11-153
+      - 183.240.98.84
+      - 36.155.169.188
+      - 223.109.82.11-223
 
 rules:
   - MATCH,节点选择
