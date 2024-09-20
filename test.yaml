@@ -41,6 +41,7 @@ proxies:
   - {name: 223.109.82.11-223, server: 223.109.82.11, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 223.109.82.11:443}}
   - {name: dd直连, server: 183.240.98.84, port: 443, type: http, headers: {withAt: gw.alicdn.com, X-T5-Auth: 683556433, Host: 153.3.236.22:443}}
   - {name: 江苏南京移动, server: 223.109.82.225, port: 443, type: http, headers: {X-T5-Auth: 683556433, Host: 153.3.236.22:443}}
+  - {name: 百度直连183.240.98.84, type: http, server: 183.240.98.84, port: 443, headers: {Host: sptest.baidu.com, X-T5-Auth: 482857715}}
 
 
 proxy-groups:
@@ -73,6 +74,7 @@ proxy-groups:
       - 223.109.82.11-223
       - dd直连
       - 江苏南京移动
+      - 百度直连183.240.98.84
       - 自动延迟
   - name: 自动延迟
     type: url-test
@@ -105,6 +107,7 @@ proxy-groups:
       - 223.109.82.11-223
       - dd直连
       - 江苏南京移动
+      - 百度直连183.240.98.84
 
 rules:
   - MATCH,节点选择
